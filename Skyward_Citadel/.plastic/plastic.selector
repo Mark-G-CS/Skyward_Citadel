@@ -1,0 +1,4 @@
+repository "Skyward_Citadel@CrimsonSea1@cloud"
+  path "/"
+    br "/main"
+    co "/main"
