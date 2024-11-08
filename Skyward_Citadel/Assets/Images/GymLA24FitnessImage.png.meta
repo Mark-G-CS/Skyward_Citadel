@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GymLA24FitnessImage_0: 2286111273347488585
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
