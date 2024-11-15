@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IDamgeable
+public interface IDamageable
 {
     void Damage(float damageAmount);
 
@@ -9,4 +9,8 @@ public interface IDamgeable
     float MaxHealth { get; set; }
 
     float CurrentHealth { get; set; }
+
+ 
+
+    float DamageResist { get; set; }
 }
