@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IDamgeable
+public class Player : MonoBehaviour, IDamageable
 {
 
     public  PlayerController controller;
@@ -15,6 +15,8 @@ public class Player : MonoBehaviour, IDamgeable
     public PlayerDashState DashState { get; set; }  
     public PlayerInteractState interactState { get; set; }
     public PlayerResolverState resolverState { get; set; }
+    public float DealDamage { get; set; }
+    public float DamageResist { get; set; }
 
     #endregion
 
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour, IDamgeable
         {
             Death();
         }
+        
     }
 
     public void Death()
