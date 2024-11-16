@@ -17,6 +17,7 @@ public class PlayerController2 : PhysicsObject
                                             //This limit can be exceeded by other means, such as dashing or stepping on some sort of booster!
     float walkSpeed = 0.6f;
 
+    float gravityMult = 20.0f;                 //Gravity is initially -9.8 but is multiplied by gravityMult. Values greater than 1 will result in higher gravity, whilst values lower result in lower gravity.
 
     float jumpSpeed = 1.0f;
     bool rising = false;                    //This rising variable will turn true if the player is holding space during a jump. Once the player let's go, it will become false again
@@ -24,9 +25,12 @@ public class PlayerController2 : PhysicsObject
     int dynamicJumpFramesLeft = 0;          //This variable is how many frames a player has left in a dynamic jump. Once it reaches 0, holding space during a jump will no longer increase jump height.
 
     public bool currentlyJumping = false;   //Used to keep track of if the player is currently in the middle of a jump and holding space. This is so the player doesn't use all of their double jumps by simply holding space.
-    public int bonusJumps = 2;              //Helps keeps track of the max amount of additional jumps a player can make after they initiate a chain of jumps
+    public int bonusJumps = 3;              //Helps keeps track of the max amount of additional jumps a player can make after they initiate a chain of jumps
     public int remainingJumps = 0;          //This variable will keep track of how many jumps a player has left whilst in the middle of a string of jumps. It will refresh back to the "bonusJumps" variable upon touching the ground
-    public int doubleJumpTimer = 0;
+    public int spaceDownInt = 0;               //This integer will be 0 when space is not pressed, 1 for a single frame when space is pressed, and then 2 while space is held.
+                                               //Upon letting go of space, it will go to 3 for a single frame to signify space being released.
+                                               //Finally, it will cycle back from 3 to 0, where space will need to be pressed again to start the cycle over.
+    public bool doubleJumpOK = false;
     /*/////////////////////////////////////////////////////////*/
 
 
@@ -39,6 +43,7 @@ public class PlayerController2 : PhysicsObject
         startpos = transform.position;
         lives = 3;
         livesText.text = lives.ToString() + " lives";
+        Physics2D.gravity = new Vector3(0, 9.8f * gravityMult, 0);
     }
 
     public void Movement(Vector2 move, bool movex)
@@ -88,6 +93,8 @@ public class PlayerController2 : PhysicsObject
     // Update is called once per frame
     void FixedUpdate()
     {
+        spaceDown();
+
         if ((velocity.x > 0 && Input.GetKey(KeyCode.A)) || ((velocity.x < 0) && Input.GetKey(KeyCode.D))) { enactFriction(); }
         //This first if clause is to check if the player is holding a direction opposite to their current velocity.
         //To make turning around and changing direction smoother, we'll enable friction if the player is holding a direction opposite to their current velocity.
@@ -123,11 +130,10 @@ public class PlayerController2 : PhysicsObject
             rising = true;
             dynamicJumpFramesLeft = dynamicJumpFrames;
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && !grounded && remainingJumps > 0)
+        else if (Input.GetKey(KeyCode.Space) && !grounded && remainingJumps > 0 && doubleJumpOK)
         {
-            doubleJumpTimer = 60;
             remainingJumps = remainingJumps - 1;
-            dynamicJump();
+            velocity.y = 5.5f;
             rising = true;
             dynamicJumpFramesLeft = dynamicJumpFrames;
         }
@@ -135,8 +141,15 @@ public class PlayerController2 : PhysicsObject
         {
             dynamicJump();
         }
-        if (doubleJumpTimer > 0) doubleJumpTimer = doubleJumpTimer - 1;
-        else doubleJumpTimer = 0;
+       
+        if (spaceDownInt == 1)
+        {
+            doubleJumpOK = false;
+        }
+        if (spaceDownInt == 3)
+        {
+            doubleJumpOK = true;
+        }
 
 
         velocity += Physics2D.gravity * Time.deltaTime;
@@ -187,8 +200,24 @@ public class PlayerController2 : PhysicsObject
         }
     }
 
-    public void doubleJump()
+    public void spaceDown()
     {
-        velocity.y = 10f;
+        if (spaceDownInt == 3)
+        {
+            spaceDownInt = 0;
+        }
+        else if (spaceDownInt == 2 && !Input.GetKey(KeyCode.Space))
+        {
+            spaceDownInt = 3;
+        }
+        else if (spaceDownInt == 1)
+        {
+            spaceDownInt = 2;
+        }
+        else if (Input.GetKey(KeyCode.Space) && spaceDownInt == 0)
+        {
+            spaceDownInt = 1;
+        }
     }
+
 }
