@@ -1,9 +1,10 @@
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
 public class Player : MonoBehaviour, IDamageable
 {
-
+    SpriteRenderer based;
     public  PlayerController controller;
     [field: SerializeField] public float MaxHealth { get; set; } = 100f;
     public float CurrentHealth { get; set; }
@@ -52,6 +53,16 @@ public class Player : MonoBehaviour, IDamageable
         {
             Death();
         }
+        GetComponent<SpriteRenderer>().material.color = Color.red;
+        Invoke("onPlayerHit", 0.3f);
+        
+
+    }
+
+    public void onPlayerHit()
+    {
+        
+        GetComponent<SpriteRenderer>().material.color = Color.white;
         
     }
 
@@ -68,7 +79,8 @@ public class Player : MonoBehaviour, IDamageable
     {
         CurrentHealth = MaxHealth;
         StateMachine.Initialize(resolverState);
-        
+        based = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
