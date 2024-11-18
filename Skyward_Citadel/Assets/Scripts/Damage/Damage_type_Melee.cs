@@ -11,7 +11,7 @@ public class Damage_type_Melee : MonoBehaviour
         if (damageable != null)
         {
             damageable.Damage(DamageToDeal);
-            Debug.Log("Delt " + DamageToDeal+ " damage!");
+            Debug.Log("Dealt " + DamageToDeal+ " damage!");
         }
         else
         {
