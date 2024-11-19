@@ -20,7 +20,6 @@ public class SceneTransitioner : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Attempting Scene Transition");
         SceneManager.LoadScene(sceneIndex);
     }
 }

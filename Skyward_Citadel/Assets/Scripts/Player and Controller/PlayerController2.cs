@@ -20,13 +20,14 @@ public class PlayerController2 : PhysicsObject
 
     float gravityValue = -30.0f;                 //Gravity is initially -9.8 but is increased to make movement less floaty overall
 
-    float jumpSpeed = 1.5f;
+    float minJumpHeight = 7.2f;             //Minimum Height of player jump (When space is held for minimum amount of time)
+    float jumpSpeed = 1.7f;
     bool rising = false;                    //This rising variable will turn true if the player is holding space during a jump. Once the player let's go, it will become false again
     int dynamicJumpFrames = 9;              //This variable is how many frames a player may hold space to increase the height of their jump. In other words, it is a player's max jump height.
     int dynamicJumpFramesLeft = 0;          //This variable is how many frames a player has left in a dynamic jump. Once it reaches 0, holding space during a jump will no longer increase jump height.
 
     public bool currentlyJumping = false;   //Used to keep track of if the player is currently in the middle of a jump and holding space. This is so the player doesn't use all of their double jumps by simply holding space.
-    public int bonusJumps = 3;              //Helps keeps track of the max amount of additional jumps a player can make after they initiate a chain of jumps
+    public int bonusJumps = 2;              //Helps keeps track of the max amount of additional jumps a player can make after they initiate a chain of jumps
     public int remainingJumps = 0;          //This variable will keep track of how many jumps a player has left whilst in the middle of a string of jumps. It will refresh back to the "bonusJumps" variable upon touching the ground
     public int spaceDownInt = 0;            //This integer will be 0 when space is not pressed, 1 for a single frame when space is pressed, and then 2 while space is held.
                                             //Upon letting go of space, it will go to 3 for a single frame to signify space being released.
@@ -84,8 +85,8 @@ public class PlayerController2 : PhysicsObject
                     else if (!movex)
                     {
                         move.y = 0;
+                        if (velocity.y < 0) grounded = true;
                         velocity.y = 0;
-                        grounded = true;
                         CollideWithVertical(results[i].collider);
                     }
                 }
@@ -242,14 +243,14 @@ public class PlayerController2 : PhysicsObject
         if (grounded) remainingJumps = bonusJumps;
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
-            velocity.y = 5.5f;      //This is the minimum jump height. Assuming the player holds the spacebar for the least possible amount of time, the character will at least jump this high.
+            velocity.y = minJumpHeight;      //This is the minimum jump height. Assuming the player holds the spacebar for the least possible amount of time, the character will at least jump this high.
             rising = true;
             dynamicJumpFramesLeft = dynamicJumpFrames;
         }
         else if (Input.GetKey(KeyCode.Space) && !grounded && remainingJumps > 0 && doubleJumpOK)
         {
             remainingJumps = remainingJumps - 1;
-            velocity.y = 5.5f;
+            velocity.y = minJumpHeight;
             rising = true;
             dynamicJumpFramesLeft = dynamicJumpFrames;
         }
@@ -315,7 +316,7 @@ public class PlayerController2 : PhysicsObject
                 doubleTapA = 1;
             }
         }
-        else if (Input.GetKey(KeyCode.A) && doubleTapA > 1 && dashTimerCounter == 0&&dashOK)
+        else if (Input.GetKey(KeyCode.A) && doubleTapA > 1 && dashTimerCounter == 0 && dashOK)
         {
             dashTimerCounter = 1;
             velocity.x = -dashSetSpeed;
@@ -334,7 +335,7 @@ public class PlayerController2 : PhysicsObject
                 doubleTapD = 1;
             }
         }
-        else if (Input.GetKey(KeyCode.D) && doubleTapD > 1 && dashTimerCounter == 0&&dashOK)
+        else if (Input.GetKey(KeyCode.D) && doubleTapD > 1 && dashTimerCounter == 0 && dashOK)
         {
             dashTimerCounter = 1;
             velocity.x = dashSetSpeed;
