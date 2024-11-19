@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4b2fe9b3dc647d641bfc509ceba0691b
+guid: 65f4934efde3d354a85d966189d7d4f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -916419267821302573
-    second: Blocked Out Map_0
+      213: 1704532108918400132
+    second: TutorialFloorBottom1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blocked Out Map_0
+      name: TutorialFloorBottom1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 7377
-        height: 4177
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3dc003408893843f0800000000000000
-      internalID: -916419267821302573
+      spriteID: 484245c0ce6b7a710800000000000000
+      internalID: 1704532108918400132
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Blocked Out Map_0: -916419267821302573
+      TutorialFloorBottom1_0: 1704532108918400132
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -301,7 +301,6 @@ public class PlayerController2 : PhysicsObject
     public void dashMotion()
     {
         intTimer(ref dashTimerCounter, dashTimer);
-        Debug.Log(dashTimerCounter);
 
         if (aDownInt == 3 || dDownInt == 3)
         {
