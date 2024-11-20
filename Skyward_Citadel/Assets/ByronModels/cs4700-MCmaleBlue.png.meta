@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cs4700-MCmaleBlue_0: 2597689908950166463
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
