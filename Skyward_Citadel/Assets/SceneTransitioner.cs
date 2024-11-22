@@ -5,6 +5,8 @@ public class SceneTransitioner : MonoBehaviour
 {
     public int sceneIndex = 0;
     public static SceneTransitioner transitioner;
+    public float playerSetX = 0;
+    public float playerSetY = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +22,11 @@ public class SceneTransitioner : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(sceneIndex);
+
+        if (collision.CompareTag("Player"))
+        {
+            collision.transform.position= new Vector3(playerSetX, playerSetY,0.0f);
+            SceneManager.LoadScene(sceneIndex);
+        }
     }
 }
