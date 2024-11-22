@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 865facbc54a42204ca0d0c0d18fd2249
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Floatingdamagetxt: {fileID: 5011718977328693615, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
+  - popUpText: {fileID: -2676480483782377715, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
