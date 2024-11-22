@@ -42,10 +42,5 @@ public class PlayerController : PhysicsObject
 
     }
 
-    public override void CollideWith(Collider2D other)
-    {
-
-    }
-
 
 }

@@ -309,15 +309,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      cs4700-MCfemaleBlueRUNsequence_0: -7057939933204752362
-      cs4700-MCfemaleBlueRUNsequence_1: 9161359781087631654
-      cs4700-MCfemaleBlueRUNsequence_2: 2146452480392892481
-      cs4700-MCfemaleBlueRUNsequence_3: -1424964515083089684
-      cs4700-MCfemaleBlueRUNsequence_4: 1938579630240573710
-      cs4700-MCfemaleBlueRUNsequence_5: -8105052219118371928
-      cs4700-MCfemaleBlueRUNsequence_6: -8250100010974266283
-      cs4700-MCfemaleBlueRUNsequence_7: -7889471561358247777
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
