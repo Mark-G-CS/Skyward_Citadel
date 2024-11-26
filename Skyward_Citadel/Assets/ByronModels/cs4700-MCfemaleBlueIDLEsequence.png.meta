@@ -584,7 +584,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cs4700-MCfemaleBlueIDLEsequence_0: -4886578620121384585
+      cs4700-MCfemaleBlueIDLEsequence_1: 4333548415696958523
+      cs4700-MCfemaleBlueIDLEsequence_10: -6272399184996063833
+      cs4700-MCfemaleBlueIDLEsequence_11: 2046582261087964671
+      cs4700-MCfemaleBlueIDLEsequence_12: 4059382297044226893
+      cs4700-MCfemaleBlueIDLEsequence_13: 7322890715000282492
+      cs4700-MCfemaleBlueIDLEsequence_14: 5185779059634406380
+      cs4700-MCfemaleBlueIDLEsequence_15: -4251223827744171165
+      cs4700-MCfemaleBlueIDLEsequence_16: -5819715621214450766
+      cs4700-MCfemaleBlueIDLEsequence_17: -2813685430869336797
+      cs4700-MCfemaleBlueIDLEsequence_18: -274501017111565818
+      cs4700-MCfemaleBlueIDLEsequence_2: 5861925118915368697
+      cs4700-MCfemaleBlueIDLEsequence_3: -2057755049781149776
+      cs4700-MCfemaleBlueIDLEsequence_4: 3813231320229302918
+      cs4700-MCfemaleBlueIDLEsequence_5: -5185832915415764383
+      cs4700-MCfemaleBlueIDLEsequence_6: 7372878176526720332
+      cs4700-MCfemaleBlueIDLEsequence_7: 982505062482333222
+      cs4700-MCfemaleBlueIDLEsequence_8: -9097598352048205784
+      cs4700-MCfemaleBlueIDLEsequence_9: -1883430845065806849
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

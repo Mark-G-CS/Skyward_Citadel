@@ -1,31 +1,7 @@
 fileFormatVersion: 2
-guid: 57eb837b0e6ae7646af5ff5b2e5b8018
+guid: a17fd815ac446494aa07992233bb6a05
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -7057939933204752362
-    second: cs4700-MCfemaleBlueRUNsequence_0
-  - first:
-      213: 9161359781087631654
-    second: cs4700-MCfemaleBlueRUNsequence_1
-  - first:
-      213: 2146452480392892481
-    second: cs4700-MCfemaleBlueRUNsequence_2
-  - first:
-      213: -1424964515083089684
-    second: cs4700-MCfemaleBlueRUNsequence_3
-  - first:
-      213: 1938579630240573710
-    second: cs4700-MCfemaleBlueRUNsequence_4
-  - first:
-      213: -8105052219118371928
-    second: cs4700-MCfemaleBlueRUNsequence_5
-  - first:
-      213: -8250100010974266283
-    second: cs4700-MCfemaleBlueRUNsequence_6
-  - first:
-      213: -7889471561358247777
-    second: cs4700-MCfemaleBlueRUNsequence_7
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -91,8 +67,21 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -104,8 +93,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Standalone
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -121,205 +110,201 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cs4700-MCfemaleBlueRUNsequence_0
+      name: Obj_chest_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 49
-        width: 232
-        height: 322
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 618594b76092d0e90800000000000000
-      internalID: -7057939933204752362
+      spriteID: 70d232a0c1d307b4597836fcbdcd6bbf
+      internalID: 448799341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cs4700-MCfemaleBlueRUNsequence_1
+      name: Obj_chest_1
       rect:
         serializedVersion: 2
-        x: 369
-        y: 49
-        width: 232
-        height: 302
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62957439e20b32f70800000000000000
-      internalID: 9161359781087631654
+      spriteID: 38e70e28af61dd643b72986becdf0e57
+      internalID: 336359500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cs4700-MCfemaleBlueRUNsequence_2
+      name: Obj_chest_2
       rect:
         serializedVersion: 2
-        x: 689
-        y: 49
-        width: 232
-        height: 332
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1401315982bb9cd10800000000000000
-      internalID: 2146452480392892481
+      spriteID: ef1b0e6d9c38ec74ab0baf4a99eaee21
+      internalID: -198950500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cs4700-MCfemaleBlueRUNsequence_3
+      name: Obj_chest_3
       rect:
         serializedVersion: 2
-        x: 1019
-        y: 49
-        width: 232
-        height: 332
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ce88fe4c252893ce0800000000000000
-      internalID: -1424964515083089684
+      spriteID: ca6f3f9cc91eea84fac5d2ca58954e60
+      internalID: 996864198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cs4700-MCfemaleBlueRUNsequence_4
+      name: Obj_chest_4
       rect:
         serializedVersion: 2
-        x: 1329
-        y: 49
-        width: 232
-        height: 322
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e092c4517e737ea10800000000000000
-      internalID: 1938579630240573710
+      spriteID: 7743d1925e50dd34a9a817ffec8230e1
+      internalID: -2043782318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cs4700-MCfemaleBlueRUNsequence_5
+      name: Obj_chest_5
       rect:
         serializedVersion: 2
-        x: 1639
-        y: 49
-        width: 242
-        height: 312
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8ab3579f2f1158f80800000000000000
-      internalID: -8105052219118371928
+      spriteID: 07bcb27c08088e44e9a464d746d4e803
+      internalID: -1522184078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cs4700-MCfemaleBlueRUNsequence_6
+      name: Obj_chest_6
       rect:
         serializedVersion: 2
-        x: 1969
-        y: 49
-        width: 232
-        height: 332
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 55cbe6c30c1c18d80800000000000000
-      internalID: -8250100010974266283
+      spriteID: ca8dfc573c1c09e4a853331d6a696f18
+      internalID: -2065246461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cs4700-MCfemaleBlueRUNsequence_7
+      name: Obj_chest_7
       rect:
         serializedVersion: 2
-        x: 2299
-        y: 49
-        width: 232
-        height: 332
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f98f1b74a67f28290800000000000000
-      internalID: -7889471561358247777
+      spriteID: c7a5da8ecc01b3149b32f772e0fbbaf4
+      internalID: -1414184853
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
-      cs4700-MCfemaleBlueRUNsequence_0: -7057939933204752362
-      cs4700-MCfemaleBlueRUNsequence_1: 9161359781087631654
-      cs4700-MCfemaleBlueRUNsequence_2: 2146452480392892481
-      cs4700-MCfemaleBlueRUNsequence_3: -1424964515083089684
-      cs4700-MCfemaleBlueRUNsequence_4: 1938579630240573710
-      cs4700-MCfemaleBlueRUNsequence_5: -8105052219118371928
-      cs4700-MCfemaleBlueRUNsequence_6: -8250100010974266283
-      cs4700-MCfemaleBlueRUNsequence_7: -7889471561358247777
+      Obj_chest_0: 448799341
+      Obj_chest_1: 336359500
+      Obj_chest_2: -198950500
+      Obj_chest_3: 996864198
+      Obj_chest_4: -2043782318
+      Obj_chest_5: -1522184078
+      Obj_chest_6: -2065246461
+      Obj_chest_7: -1414184853
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 254632
+  packageName: 2D TileSet Platformer
+  packageVersion: 1.0
+  assetPath: Assets/PlatformerTileset/Objects/Obj_chest.png
+  uploadId: 694875
