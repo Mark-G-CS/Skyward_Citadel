@@ -15,14 +15,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Nic Scenes/TestScene1.unity
     guid: 9f067d30301c92f4ab1e52ad43e80684
   - enabled: 1
-    path: Assets/Scenes/Nic Scenes/Tutorial Area/R1.unity
+    path: Assets/Scenes/Nic Scenes/Tutorial Area/R1 - Start.unity
     guid: 133492b27decf6845af8d58ab7061f00
   - enabled: 1
-    path: Assets/Scenes/Nic Scenes/Tutorial Area/R2.unity
+    path: Assets/Scenes/Nic Scenes/Tutorial Area/R2 - Double Jump.unity
     guid: 9be0447ed7aeb1a4ba0a8ef7f929878c
   - enabled: 1
-    path: Assets/Scenes/Nic Scenes/Tutorial Area/R3.unity
+    path: Assets/Scenes/Nic Scenes/Tutorial Area/R3 - Dash.unity
     guid: 346ffa9b5bcad7d49ba60dc97bf440d5
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tutorial Area/R4 - Branching Path.unity
+    guid: e5d48c1b62bca0747ad8df92a769ed2c
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tutorial Area/R5 - Bonus.unity
+    guid: ce279c28e4d14164dab67c5d3f527a3f
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tutorial Area/R6 - Enemy.unity
+    guid: 49782c06eb4067c42aa042fde8925542
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tutorial Area/R7 - Closet.unity
+    guid: 4ba93e4c79a2b1f4f9aeea910869a36c
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tutorial Area/R8 - Exit.unity
+    guid: b8fb75b98fb14794e8b7d486ee6e99f4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
