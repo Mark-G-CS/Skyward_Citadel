@@ -6,39 +6,65 @@ using UnityEngine.UI;
 
 public class PlayerController : PhysicsObject
 {
+    Animator animator;
     public Vector2 startpos;
     public int lives;
     public Text livesText;
-
-
-
-
-
-
+    public bool leftFace = true;
     // Start is called before the first frame update
     void Start()
     {
         startpos = transform.position;
         lives = 3;
         livesText.text = lives.ToString() + " lives";
+        //animator = GetComponent<Animator>();
+        
     }
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
 
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetAxis("Horizontal") > 0)
         {
             desiredx = 3;
+            if (leftFace)
+            {
+                leftFace = false;
+                ResolveRotation();
+            }
+            animator.SetBool("Moving", true);
         }
-        else if (Input.GetKey(KeyCode.A)) { desiredx = -3; }
+        else if (Input.GetAxis("Horizontal") < 0)
+        {
+            desiredx = -3;
+            if (!leftFace)
+            {
+                leftFace = true;
+                ResolveRotation();
+            }
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            desiredx = 0;
+            animator.SetBool("Moving", false);
 
-        else desiredx = 0;
-
-        if (Input.GetKey(KeyCode.Space) && grounded)
+        }
+        if (Input.GetButton("Jump") && grounded)
         {
             velocity.y = 6.5f;
         }
+        
+       
+    }
 
+    public void ResolveRotation()
+    {
+        GetComponent<Rigidbody2D>().transform.Rotate(0f, 180f, 0f);
 
     }
 

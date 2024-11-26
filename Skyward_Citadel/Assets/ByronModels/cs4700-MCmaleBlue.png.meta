@@ -96,6 +96,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -103,12 +116,12 @@ TextureImporter:
       name: cs4700-MCmaleBlue_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 69
-        width: 232
-        height: 362
+        x: 17
+        y: 55
+        width: 275
+        height: 401
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -121,11 +134,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: cs4700-MCmaleBlue_1
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 114
+        width: 35
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fc8971eec1d3742a30cee8fe770de9
+      internalID: 1124147445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f5fd15ecdcfab634aaa307f880bbfbd7
     internalID: 0
     vertices: []
     indices: 
@@ -136,6 +171,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       cs4700-MCmaleBlue_0: 2597689908950166463
+      cs4700-MCmaleBlue_1: 1124147445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

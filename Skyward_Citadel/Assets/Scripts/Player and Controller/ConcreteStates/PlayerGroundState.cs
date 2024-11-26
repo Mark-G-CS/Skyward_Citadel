@@ -8,6 +8,7 @@ public class PlayerGroundState : PlayerState
 
     public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
     {
+
         base.AnimationTriggerEvent(triggerType);
     }
 

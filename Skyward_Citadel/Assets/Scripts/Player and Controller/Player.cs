@@ -36,7 +36,10 @@ public class Player : MonoBehaviour, IDamageable
     public enum AnimationTriggerType
     {
         PlayerDamaged,
-        PlayerInAir
+        PlayerInAir,
+        PlayerInDash,
+        PlayerMovingGrounded,
+        PlayerIdleGrounded
 
     }
     private void AnimationTriggerEvent(AnimationTriggerType triggerType)
