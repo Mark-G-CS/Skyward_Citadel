@@ -10,11 +10,11 @@ public class ProjectileBehavior : MonoBehaviour
 
     private void Update()
     {
-        //now we make it moving forward
+        //Task 1: now we make it moving forward
         //somehow this line of code relates to the fact that
         //the character and projectile's orientaiton is left BY DEFAULT
 
-        transform.position += (-transform.right) * Time.deltaTime * Speed;
+        transform.position += (transform.right) * Time.deltaTime * Speed;
 
         //transform.position refers to the current position of the object in the game world
         // += : adds the computed value on the right hand side to the current position. 
