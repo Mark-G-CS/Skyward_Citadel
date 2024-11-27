@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6816400038020038382}
   m_Layer: 0
   m_Name: PlayerTestPrefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   gravityFactor: 0.5
   grounded: 0
   desiredx: 0
+  ProjectileGreenFireObject: {fileID: 4829172781144436196, guid: b082c878624c250409f6ac7729e4acbd, type: 3}
   startpos: {x: 0, y: 0}
   lives: 10
   livesText: {fileID: 0}

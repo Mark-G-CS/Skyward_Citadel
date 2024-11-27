@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ProjectileBehavior : MonoBehaviour
@@ -7,6 +8,7 @@ public class ProjectileBehavior : MonoBehaviour
 
     //INSTANCE VARIABLE
     public float Speed = 4.5f;
+    [SerializeField] public bool PlayerSource = false;
 
     private void Update()
     {
@@ -14,7 +16,8 @@ public class ProjectileBehavior : MonoBehaviour
         //somehow this line of code relates to the fact that
         //the character and projectile's orientaiton is left BY DEFAULT
 
-        transform.position += (transform.right) * Time.deltaTime * Speed;
+        transform.position -= (transform.right) * Time.deltaTime * Speed;
+        
 
         //transform.position refers to the current position of the object in the game world
         // += : adds the computed value on the right hand side to the current position. 
@@ -34,10 +37,21 @@ public class ProjectileBehavior : MonoBehaviour
     }
 
     //Task 2: It needs to destroy itself when a collision occurs 
-    private void OnCollisionEnter2D(Collision2D collision) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //this function will be invoked (triggered) when my 2D object got collision
-        Destroy(gameObject);
+        if (collision.tag == "Player" && PlayerSource == true)
+        {
+         
+        }
+        else
+        {
+            if (collision.tag != tag)
+            {
+                Destroy(gameObject);
+            }
+        }
+ 
         
     }
 

@@ -8,6 +8,8 @@ public class Damage_type_Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         IDamageable damageable = collider.GetComponent<IDamageable>();
+
+        if (tag == "PlayerDamage" && collider.tag == "Player") { return; }
         if (damageable != null)
         {
             damageable.Damage(DamageToDeal);

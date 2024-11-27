@@ -48,7 +48,8 @@ public class Player : MonoBehaviour, IDamageable
 
     }
 
-
+    // NOW IN HEALTH.CS 
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     public void Damage(float damageAmount)
     {
         CurrentHealth -= damageAmount;
@@ -76,7 +77,7 @@ public class Player : MonoBehaviour, IDamageable
         
        
     }
-
+   // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
