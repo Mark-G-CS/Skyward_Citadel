@@ -28,6 +28,7 @@ public class PlayerController : PhysicsObject
     // Update is called once per frame
     void Update()
     {
+        // Handling horizontal movement
         if (Input.GetAxis("Horizontal") > 0)
         {
             desiredx = 3;
@@ -54,11 +55,18 @@ public class PlayerController : PhysicsObject
             animator.SetBool("Moving", false);
 
         }
+        
+        // Handling jump
         if (Input.GetButton("Jump") && grounded)
         {
             velocity.y = 6.5f;
+            animator.SetBool("Grounded", false);
         }
-        
+        else
+        {
+
+            animator.SetBool("Grounded", true);
+        }
        
     }
 
