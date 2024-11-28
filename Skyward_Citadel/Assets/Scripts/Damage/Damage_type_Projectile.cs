@@ -9,7 +9,7 @@ public class Damage_type_Projectile : MonoBehaviour
     {
         IDamageable damageable = collider.GetComponent<IDamageable>();
 
-        if (tag == "PlayerDamage" && collider.tag == "Player") { return; }
+        if (tag == "PlayerDamage" && collider.tag == "Player" || (collider.tag == tag)) { return; }
         if (damageable != null)
         {
             damageable.Damage(DamageToDeal);

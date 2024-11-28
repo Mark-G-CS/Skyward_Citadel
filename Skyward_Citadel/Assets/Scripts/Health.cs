@@ -38,17 +38,20 @@ public class Health : MonoBehaviour, IDamageable
         if (invulnerable) return;
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
         popUpText.text = _damage.ToString();
-        Instantiate(Floatingdamagetxt, transform.position, Quaternion.identity);
-        GetComponent<SpriteRenderer>().material.color = new Color(1, 0.4f, 0.4f, 1);
+
         Invoke("onPlayerHit", 0.3f);
 
         if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
             StartCoroutine(Invunerability());
+            Instantiate(Floatingdamagetxt, transform.position, Quaternion.identity);
+            GetComponent<SpriteRenderer>().material.color = new Color(1, 0.4f, 0.4f, 1);
         }
         else
         {
+            popUpText.text = "I am dead";
+            Instantiate(Floatingdamagetxt, transform.position, Quaternion.identity);
             if (!dead)
             {
                 anim.SetTrigger("die");
@@ -56,11 +59,20 @@ public class Health : MonoBehaviour, IDamageable
                 //Deactivate all attached component classes
                 foreach (Behaviour component in components)
                     component.enabled = false;
+                popUpText.text = "I am dead";
+                Instantiate(Floatingdamagetxt, transform.position, Quaternion.identity);
+                GetComponent<SpriteRenderer>().material.color = new Color(1, 0.4f, 0.4f, 1);
 
                 dead = true;
             }
         }
 
+    }
+
+    public bool getisdead()
+    {
+
+        return dead;
     }
 
 

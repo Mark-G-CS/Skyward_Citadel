@@ -9,7 +9,8 @@ public class ProjectileBehavior : MonoBehaviour
     //INSTANCE VARIABLE
     public float Speed = 4.5f;
     [SerializeField] public bool PlayerSource = false;
-
+    [SerializeField] public float LifeSpan = 15f;
+    private float timer = 0.0f;
     private void Update()
     {
         //Task 1: now we make it moving forward
@@ -18,7 +19,12 @@ public class ProjectileBehavior : MonoBehaviour
 
         transform.position -= (transform.right) * Time.deltaTime * Speed;
         
-
+        //If the projectile never hits anything, destroy it so it doesnt forever take up resources
+        timer += Time.deltaTime; 
+        if (timer > LifeSpan)
+        {
+            Destroy(gameObject);
+        }
         //transform.position refers to the current position of the object in the game world
         // += : adds the computed value on the right hand side to the current position. 
         //This means the object is being moved incrementally. 
@@ -40,7 +46,7 @@ public class ProjectileBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //this function will be invoked (triggered) when my 2D object got collision
-        if (collision.tag == "Player" && PlayerSource == true)
+        if (collision.tag == "Player" && PlayerSource == true || (collision.tag == tag))
         {
          
         }
