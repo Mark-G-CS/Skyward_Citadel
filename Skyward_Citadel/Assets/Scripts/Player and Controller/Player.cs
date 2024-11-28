@@ -1,9 +1,10 @@
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IDamgeable
+public class Player : MonoBehaviour, IDamageable
 {
-
+    SpriteRenderer based;
     public  PlayerController controller;
     [field: SerializeField] public float MaxHealth { get; set; } = 100f;
     public float CurrentHealth { get; set; }
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour, IDamgeable
     public PlayerDashState DashState { get; set; }  
     public PlayerInteractState interactState { get; set; }
     public PlayerResolverState resolverState { get; set; }
+    public float DealDamage { get; set; }
+    public float DamageResist { get; set; }
 
     #endregion
 
@@ -50,6 +53,17 @@ public class Player : MonoBehaviour, IDamgeable
         {
             Death();
         }
+        GetComponent<SpriteRenderer>().material.color = Color.red;
+        Invoke("onPlayerHit", 0.3f);
+        
+
+    }
+
+    public void onPlayerHit()
+    {
+        
+        GetComponent<SpriteRenderer>().material.color = Color.white;
+        
     }
 
     public void Death()
@@ -65,7 +79,8 @@ public class Player : MonoBehaviour, IDamgeable
     {
         CurrentHealth = MaxHealth;
         StateMachine.Initialize(resolverState);
-        
+        based = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
