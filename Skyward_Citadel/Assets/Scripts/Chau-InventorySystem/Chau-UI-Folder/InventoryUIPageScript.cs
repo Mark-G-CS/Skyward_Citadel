@@ -2,6 +2,8 @@ using NUnit.Framework;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
+using System;
 
 
 public class InventoryUIPageScript : MonoBehaviour
@@ -61,7 +63,38 @@ public class InventoryUIPageScript : MonoBehaviour
 
             listOfUIItems.Add(uiItem);
 
+            uiItem.OnItemClicked += HandleItemSelection;
+            uiItem.OnItemBeginDrag += HandleBeginDrag;
+            uiItem.OnItemDroppedOn += HandleSwap;
+            uiItem.OnItemEndDrag += HandleEndDrag;
+            uiItem.OnRightMouseButtonClicked += HandleShowItemActions;
+
         }
+    }
+
+    private void HandleShowItemActions(UIInventoryItem item)
+    {
+        
+    }
+
+    private void HandleEndDrag(UIInventoryItem item)
+    {
+        
+    }
+
+    private void HandleSwap(UIInventoryItem item)
+    {
+        
+    }
+
+    private void HandleBeginDrag(UIInventoryItem item)
+    {
+        
+    }
+
+    private void HandleItemSelection(UIInventoryItem item)
+    {
+        Debug.Log(item.name);
     }
 
     //Make it able for player to hide and show the inventory page. 

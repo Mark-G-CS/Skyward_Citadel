@@ -128,10 +128,36 @@ public class UIInventoryItem : MonoBehaviour
          * 1. If the slot is empty, the drag is ignored. 
          * 2. If the slot is not empty, the OnItemBeginDrag event is invoked, 
          * notifying other parts of the system (e.g. to create a dragging visual or to 
-         * handle inventory logic.)
-         * 
+         * handle inventory logic.
          */
 
+    public void OnDrop()
+    {
+        OnItemDroppedOn?.Invoke(this);
+    }
 
+    public void OnEndDrag()
+    {
+        OnItemEndDrag?.Invoke(this);
+    }
+   
+    public void OnPointerClick(BaseEventData data)
+    {
+        if (empty)
+        {
+            return;
+        }
+
+        PointerEventData pointerData = (PointerEventData)data;
+        if(pointerData.button == PointerEventData.InputButton.Right)
+        {
+            OnRightMouseButtonClicked?.Invoke(this);
+        }
+        else
+        {
+            OnItemClicked?.Invoke(this);
+        }
+    }
     
+
 }
