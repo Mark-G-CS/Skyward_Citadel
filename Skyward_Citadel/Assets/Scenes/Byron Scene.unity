@@ -678,6 +678,7 @@ MonoBehaviour:
   gravityFactor: 0.5
   grounded: 1
   desiredx: 0
+  ProjectileGreenFireObject: {fileID: 0}
   startpos: {x: 0, y: 0}
   lives: 3
   livesText: {fileID: 0}
@@ -790,7 +791,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1424964515083089684, guid: 57eb837b0e6ae7646af5ff5b2e5b8018, type: 3}
+  m_Sprite: {fileID: -1068377373870781103, guid: 57e454b9b267c4c468695bc6208abc31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
