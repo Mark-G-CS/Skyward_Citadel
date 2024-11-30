@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class PlayerController2 : PhysicsObject
 {
+    Animator animator;
     public Vector2 startpos;
     public int lives;
     public Text livesText;
-
+    public bool leftFace = true;
+    // Start is called before the first frame update
 
     //Movement Variables
     float frictionMultiplier = 0.6f;        //This will be the rate at which the player's x velocity will slow down. Lower number = Higher Friction
@@ -57,6 +59,13 @@ public class PlayerController2 : PhysicsObject
         startpos = transform.position;
         lives = 3;
         livesText.text = lives.ToString() + " lives";
+        //animator = GetComponent<Animator>();
+
+    }
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+
     }
 
     public void Movement(Vector2 move, bool movex)
@@ -106,6 +115,29 @@ public class PlayerController2 : PhysicsObject
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKey(KeyCode.D))
+        {
+            if (leftFace)
+            {
+                leftFace = false;
+                ResolveRotation();
+            }
+            animator.SetBool("Moving", true);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            if (!leftFace)
+            {
+                leftFace = true;
+                ResolveRotation();
+            }
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
+
         spaceDown();
         aDown();
         dDown();
@@ -354,6 +386,13 @@ public class PlayerController2 : PhysicsObject
         {
             integer++;
         }
+
+    }
+
+
+    public void ResolveRotation()
+    {
+        GetComponent<Rigidbody2D>().transform.Rotate(0f, 180f, 0f);
 
     }
 }
