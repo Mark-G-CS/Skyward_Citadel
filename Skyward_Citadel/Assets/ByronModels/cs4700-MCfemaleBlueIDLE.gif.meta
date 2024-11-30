@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cs4700-MCfemaleBlueIDLE_0: 2358222355487334699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
