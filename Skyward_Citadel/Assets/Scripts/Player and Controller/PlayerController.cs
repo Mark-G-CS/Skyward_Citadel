@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerController : PhysicsObject
 {
     Animator animator;
+    public GameObject ProjectileGreenFireObject;
     public Vector2 startpos;
     public int lives;
     public Text livesText;
@@ -67,10 +68,44 @@ public class PlayerController : PhysicsObject
 
             animator.SetBool("Grounded", true);
         }
-       
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+            {
+                fireBullet(-40f);
+            }
+            else if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+            {
+                fireBullet(40f);
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                fireBullet(-90f);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                fireBullet(90f);
+            }
+            else { fireBullet(0); }
+
+
+        }
+
+
     }
 
-    public void ResolveRotation()
+    public void fireBullet(float rotMod)
+    {
+        Quaternion temp = transform.rotation;
+        temp *= Quaternion.Euler(0, 0, rotMod);
+        Debug.Log("Q");
+        Instantiate(ProjectileGreenFireObject, transform.position, temp);
+    }
+
+
+
+        public void ResolveRotation()
     {
         GetComponent<Rigidbody2D>().transform.Rotate(0f, 180f, 0f);
 

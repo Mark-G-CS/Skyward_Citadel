@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ProjectileBehavior : MonoBehaviour
@@ -7,15 +8,23 @@ public class ProjectileBehavior : MonoBehaviour
 
     //INSTANCE VARIABLE
     public float Speed = 4.5f;
-
+    [SerializeField] public bool PlayerSource = false;
+    [SerializeField] public float LifeSpan = 15f;
+    private float timer = 0.0f;
     private void Update()
     {
-        //now we make it moving forward
+        //Task 1: now we make it moving forward
         //somehow this line of code relates to the fact that
         //the character and projectile's orientaiton is left BY DEFAULT
 
-        transform.position += (-transform.right) * Time.deltaTime * Speed;
-
+        transform.position -= (transform.right) * Time.deltaTime * Speed;
+        
+        //If the projectile never hits anything, destroy it so it doesnt forever take up resources
+        timer += Time.deltaTime; 
+        if (timer > LifeSpan)
+        {
+            Destroy(gameObject);
+        }
         //transform.position refers to the current position of the object in the game world
         // += : adds the computed value on the right hand side to the current position. 
         //This means the object is being moved incrementally. 
@@ -34,10 +43,21 @@ public class ProjectileBehavior : MonoBehaviour
     }
 
     //Task 2: It needs to destroy itself when a collision occurs 
-    private void OnCollisionEnter2D(Collision2D collision) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //this function will be invoked (triggered) when my 2D object got collision
-        Destroy(gameObject);
+        if (collision.tag == "Player" && PlayerSource == true || (collision.tag == tag))
+        {
+         
+        }
+        else
+        {
+            if (collision.tag != tag)
+            {
+                Destroy(gameObject);
+            }
+        }
+ 
         
     }
 
