@@ -39,17 +39,32 @@ EditorBuildSettings:
     path: Assets/Scenes/Nic Scenes/Tutorial Area/R8 - Exit.unity
     guid: b8fb75b98fb14794e8b7d486ee6e99f4
   - enabled: 1
-    path: Assets/Scenes/Nic Scenes/Forest Area/R1 - Start.unity
+    path: Assets/Scenes/Nic Scenes/Forest Area/R11 - Start.unity
     guid: e8552e73ff4409c45876ae4968ae6e8f
   - enabled: 1
-    path: Assets/Scenes/Nic Scenes/Forest Area/R2 - Left Corridor.unity
+    path: Assets/Scenes/Nic Scenes/Forest Area/R12 - Left Corridor.unity
     guid: 43dbf7469b39a1a4d92474d599c146cd
   - enabled: 1
-    path: Assets/Scenes/Nic Scenes/Forest Area/R3 - Platforming.unity
+    path: Assets/Scenes/Nic Scenes/Forest Area/R13 - Platforming.unity
     guid: 817a1fa8c7fe7f2418d76a27f2104e52
   - enabled: 1
-    path: Assets/Scenes/Nic Scenes/Forest Area/R4 - Left Corridor Upper.unity
+    path: Assets/Scenes/Nic Scenes/Forest Area/R14 - Left Corridor Upper.unity
     guid: f4249f599439eea4db49d1e42d30c0f1
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Forest Area/R15 - Left Upper Corridor 2.unity
+    guid: d0ed7815df580ab469497e1abd912962
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Forest Area/R16 - Left Small Upway 1.unity
+    guid: 3c40604415ded284dac96374748a6c5a
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Forest Area/R17 - Left Small Upway 2.unity
+    guid: 5a3686fd4ed5d8e42ae3156edcf9b5f8
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Forest Area/R18 - Left Before Village.unity
+    guid: 3123489ff88a42b448439106ab269140
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Forest Area/R19 - Main Village.unity
+    guid: d3162d996cd261048a76be9f1fb42789
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

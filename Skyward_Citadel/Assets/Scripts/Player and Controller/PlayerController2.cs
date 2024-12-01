@@ -60,8 +60,8 @@ public class PlayerController2 : PhysicsObject
         lives = 3;
         livesText.text = lives.ToString() + " lives";
         //animator = GetComponent<Animator>();
-
     }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -72,7 +72,7 @@ public class PlayerController2 : PhysicsObject
     {
         if (move.magnitude < 0.00001f) return;
         RaycastHit2D[] results = new RaycastHit2D[16];
-        int cnt = GetComponent<Rigidbody2D>().Cast(move, results, move.magnitude + 0.01f);
+        int cnt = GetComponent<Rigidbody2D>().Cast(move, results, move.magnitude + 0.09f);
         if (cnt > 0)
         {
             for (int i = 0; i < cnt; ++i)
@@ -137,6 +137,19 @@ public class PlayerController2 : PhysicsObject
         {
             animator.SetBool("Moving", false);
         }
+
+
+
+        if (Input.GetKey(KeyCode.Space) && grounded)
+        {
+            animator.SetBool("Grounded", false);
+        }
+        else
+        {
+            animator.SetBool("Grounded", true);
+        }
+
+
 
         spaceDown();
         aDown();

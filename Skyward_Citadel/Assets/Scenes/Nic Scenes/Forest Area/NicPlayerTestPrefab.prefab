@@ -264,7 +264,7 @@ MonoBehaviour:
   livesText: {fileID: 0}
   leftFace: 1
   currentlyJumping: 0
-  bonusJumps: 2
+  bonusJumps: 1
   remainingJumps: 0
   spaceDownInt: 0
   doubleJumpOK: 0
