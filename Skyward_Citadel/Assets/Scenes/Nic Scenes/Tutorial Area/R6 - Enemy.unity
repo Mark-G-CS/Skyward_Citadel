@@ -368,7 +368,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.5625, y: 0.9296875, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -13814,6 +13814,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 26, y: 6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 32, y: 6, z: 0}
     second:
       serializedVersion: 2
@@ -20836,15 +20846,15 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: aeab2fd0c79b5f443997a04347ba092b, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 20307285601b0334a937c06630c4a7ec, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: eb9c6a0315ba45848b33ac7830d05eb5, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 68
     m_Data: {fileID: -1228405271, guid: 2852038e373524b99b67701570c171c6, type: 3}
   - m_RefCount: 36
     m_Data: {fileID: -938525989, guid: 2852038e373524b99b67701570c171c6, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 284735177, guid: 2852038e373524b99b67701570c171c6, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -671298697, guid: 63b03eaa85550aa41a7d451f2b848e58, type: 3}
   - m_RefCount: 1
@@ -20852,7 +20862,7 @@ Tilemap:
   - m_RefCount: 1938
     m_Data: {fileID: -7823662862089189128, guid: e980bcd3c714cf048ac72b31ea04def8, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2044
+  - m_RefCount: 2045
     m_Data:
       e00: 1
       e01: 0
@@ -20871,7 +20881,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2044
+  - m_RefCount: 2045
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 1.09228e-40, g: 1.09228e-40, b: 1.09228e-40, a: 1.09228e-40}
@@ -20967,17 +20977,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.24366188, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
+    pivot: {x: 0.5, y: 0.125}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1.4873238, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &1569656262
 SpriteRenderer:
@@ -21023,7 +21033,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -21031,7 +21041,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1569656263

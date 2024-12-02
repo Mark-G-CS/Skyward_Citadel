@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Damage
-  - PlayerDamage
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -13,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - TestOnTop
+  - 
   - 
   - 
   - 
@@ -40,11 +38,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2424153585
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: OntopLayer
-    uniqueID: 1371640753
+  - name: Foreground
+    uniqueID: 3928980359
     locked: 0
   m_RenderingLayers:
   - Default
