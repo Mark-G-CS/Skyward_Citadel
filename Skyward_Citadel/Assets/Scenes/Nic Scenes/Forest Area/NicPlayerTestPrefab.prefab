@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7886458751703490948}
   - component: {fileID: 7511593881236662870}
   - component: {fileID: 4843041316542442249}
-  - component: {fileID: 7311918093382658407}
   - component: {fileID: 7640708027318682652}
   - component: {fileID: 6101553717334147364}
   - component: {fileID: 7528890073805208086}
@@ -122,26 +121,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7311918093382658407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6611149040334787595}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1070eac90494ca4fa5bfc3f78c7ec79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityFactor: 0.5
-  grounded: 0
-  desiredx: 0
-  ProjectileGreenFireObject: {fileID: 0}
-  startpos: {x: 0, y: 0}
-  lives: 10
-  livesText: {fileID: 0}
-  leftFace: 1
 --- !u!70 &7640708027318682652
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -264,6 +243,7 @@ MonoBehaviour:
   lives: 0
   livesText: {fileID: 0}
   leftFace: 1
+  ProjectileGreenFireObject: {fileID: 4829172781144436196, guid: b082c878624c250409f6ac7729e4acbd, type: 3}
   currentlyJumping: 0
   bonusJumps: 1
   remainingJumps: 0
