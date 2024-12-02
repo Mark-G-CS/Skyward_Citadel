@@ -11,8 +11,11 @@ public class PlayerController2 : PhysicsObject
     public int lives;
     public Text livesText;
     public bool leftFace = true;
+    public Player Player;
 
-    public GameObject ProjectileGreenFireObject; //Holds the projectile type for the player: must be set on prefab for default value
+    public GameObject ProjectileGreenFireObject, meleeBox; 
+        //Holds the projectile type for the player: must be set on prefab for default value
+        //Also melee hurty box
     // Start is called before the first frame update
 
     //Movement Variables
@@ -67,6 +70,7 @@ public class PlayerController2 : PhysicsObject
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        Player = GetComponent<Player>();  
 
     }
 
@@ -117,6 +121,12 @@ public class PlayerController2 : PhysicsObject
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(Player.StateMachine.CurrentPlayerState == Player.groundState)
+        {
+            Debug.Log("THIS BOOL WORKS");
+        }
+
+
         if (Input.GetKey(KeyCode.D))
         {
             if (leftFace)
@@ -148,7 +158,7 @@ public class PlayerController2 : PhysicsObject
         }
         else
         {
-            animator.SetBool("Grounded", true);
+            //animator.SetBool("Grounded", true);
         }
 
 
@@ -175,6 +185,10 @@ public class PlayerController2 : PhysicsObject
         Movement(new Vector2(move.x, 0), true);
         Movement(new Vector2(0, move.y), false);
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            meleeAttack();
+        }
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -200,6 +214,13 @@ public class PlayerController2 : PhysicsObject
         }
 
 
+    }
+
+    public void meleeAttack()
+    {
+        animator.SetBool("Attack", true);
+        Quaternion temp = transform.rotation;
+        Instantiate(meleeBox, transform.position, temp);
     }
 
     public void fireBullet(float rotMod)

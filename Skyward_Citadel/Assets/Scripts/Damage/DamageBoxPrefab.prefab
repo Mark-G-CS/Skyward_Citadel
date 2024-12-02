@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3375864085259329507}
   m_Layer: 0
   m_Name: DamageBoxPrefab
-  m_TagString: Damage
+  m_TagString: PlayerDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
