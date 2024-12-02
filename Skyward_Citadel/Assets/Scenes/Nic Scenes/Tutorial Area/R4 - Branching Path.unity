@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 931493334}
   - component: {fileID: 931493333}
   m_Layer: 0
-  m_Name: Scene Transitioner 2
+  m_Name: Next Area - Bonus Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,10 +382,10 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.12}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_UseDelaunayMesh: 1
 --- !u!483693784 &1512577753
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -18919,7 +18919,7 @@ GameObject:
   - component: {fileID: 1569656261}
   - component: {fileID: 1569656260}
   m_Layer: 0
-  m_Name: Scene Transitioner 1
+  m_Name: Next Area - Main Route
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
