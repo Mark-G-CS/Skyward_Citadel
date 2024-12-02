@@ -278,6 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   <MaxHealth>k__BackingField: 100
+  animator: {fileID: 0}
 --- !u!95 &6816400038020038382
 Animator:
   serializedVersion: 7
@@ -331,7 +332,9 @@ MonoBehaviour:
   lives: 0
   livesText: {fileID: 0}
   leftFace: 1
+  Player: {fileID: 0}
   ProjectileGreenFireObject: {fileID: 4829172781144436196, guid: b082c878624c250409f6ac7729e4acbd, type: 3}
+  meleeBox: {fileID: 8844737908457216440, guid: 40eb0d1eecf768949854951f060660f7, type: 3}
   currentlyJumping: 0
   bonusJumps: 1
   remainingJumps: 0

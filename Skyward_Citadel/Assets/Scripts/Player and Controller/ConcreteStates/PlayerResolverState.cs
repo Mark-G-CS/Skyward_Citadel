@@ -34,5 +34,8 @@ public class PlayerResolverState : PlayerState
         {
             player.StateMachine.ChangeState(player.inAirState);
         }
-        }
+
+
+
+     }
 }

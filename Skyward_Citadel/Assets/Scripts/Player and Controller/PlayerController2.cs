@@ -121,11 +121,6 @@ public class PlayerController2 : PhysicsObject
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Player.StateMachine.CurrentPlayerState == Player.groundState)
-        {
-            Debug.Log("THIS BOOL WORKS");
-        }
-
 
         if (Input.GetKey(KeyCode.D))
         {
@@ -154,7 +149,7 @@ public class PlayerController2 : PhysicsObject
 
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
-            animator.SetBool("Grounded", false);
+            //animator.SetBool("Grounded", false);
         }
         else
         {
@@ -218,9 +213,13 @@ public class PlayerController2 : PhysicsObject
 
     public void meleeAttack()
     {
-        animator.SetBool("Attack", true);
-        Quaternion temp = transform.rotation;
-        Instantiate(meleeBox, transform.position, temp);
+        if (!animator.GetBool("Attack"))
+        {
+            animator.SetBool("Attack", true);
+            Quaternion temp = transform.rotation;
+            Instantiate(meleeBox, transform.position, temp);
+        }
+
     }
 
     public void fireBullet(float rotMod)

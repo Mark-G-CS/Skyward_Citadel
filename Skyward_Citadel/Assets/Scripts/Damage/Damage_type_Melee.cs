@@ -4,13 +4,22 @@ using UnityEngine;
 public class Damage_type_Melee : MonoBehaviour
 {
     [SerializeField] float DamageToDeal = 10;
+    [SerializeField] public bool PlayerSource = false;
 
     public float LifeSpan = 0.3f;
     private float timer = 0.0f;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+
         IDamageable damageable = collider.GetComponent<IDamageable>();
+
+
+        if (collider.tag == "Player" && PlayerSource == true || (collider.tag == tag))
+        {
+
+        }
+        else { 
         if (damageable != null)
         {
             damageable.Damage(DamageToDeal);
@@ -20,8 +29,13 @@ public class Damage_type_Melee : MonoBehaviour
         {
             Debug.Log("CANT BE DAMAGED");
         }
+        }
+
+
 
     }
+
+
     private void Update()
     {
 

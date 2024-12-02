@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerGroundState : PlayerState
 {
+    
     public PlayerGroundState(Player player, PlayerStateMachine stateMachine) : base(player, stateMachine)
     {
     }
@@ -16,6 +17,9 @@ public class PlayerGroundState : PlayerState
     {
         base.EnterState();
         Debug.Log("Entered 'groundState'");
+
+        player.animator.SetBool("Grounded", true);
+
     }
 
     public override void ExitState()

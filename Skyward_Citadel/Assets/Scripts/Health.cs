@@ -64,6 +64,7 @@ public class Health : MonoBehaviour, IDamageable
                 GetComponent<SpriteRenderer>().material.color = new Color(1, 0.4f, 0.4f, 1);
 
                 dead = true;
+                anim.SetBool("Dead", true);
             }
         }
 
