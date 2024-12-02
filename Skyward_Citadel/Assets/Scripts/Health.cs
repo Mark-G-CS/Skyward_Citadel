@@ -6,6 +6,7 @@ public class Health : MonoBehaviour, IDamageable
 {
     public GameObject Floatingdamagetxt;
     public TMP_Text popUpText;
+    [SerializeField] public bool amIPlayer = false;  // 12/1/2024 - so we can change certain things like animation calls 
 
     [Header("Health")]
     [SerializeField] private float startingHealth;
@@ -65,11 +66,25 @@ public class Health : MonoBehaviour, IDamageable
 
                 dead = true;
                 anim.SetBool("Dead", true);
+                if (!amIPlayer)
+                {
+                    Invoke("Death", 2f);
+                }
+
             }
         }
 
     }
+    public virtual void Death()
+    {
+        Debug.Log($"{gameObject.name} has died!");
+        popUpText.text = "Bye bye!";
+        popUpText.fontSize = 40f;
+        Instantiate(Floatingdamagetxt, transform.position, Quaternion.identity);
+        Destroy(gameObject); // Remove the object from the game
+        
 
+    }
     public bool getisdead()
     {
 
@@ -106,8 +121,4 @@ public class Health : MonoBehaviour, IDamageable
 
 
 
-    public void Death()
-    {
-        throw new System.NotImplementedException();
-    }
 }

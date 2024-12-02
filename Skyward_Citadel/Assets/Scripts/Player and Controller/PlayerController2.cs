@@ -63,7 +63,7 @@ public class PlayerController2 : PhysicsObject
     {
         startpos = transform.position;
         lives = 3;
-        livesText.text = lives.ToString() + " lives";
+        //livesText.text = lives.ToString() + " lives";
         //animator = GetComponent<Animator>();
     }
 

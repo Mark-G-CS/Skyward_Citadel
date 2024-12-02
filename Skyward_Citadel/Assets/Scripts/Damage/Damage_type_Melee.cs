@@ -49,7 +49,6 @@ public class Damage_type_Melee : MonoBehaviour
             GetComponentInParent<Animator>().SetBool("Attack", false);
             }           
             Destroy(gameObject);
-            Debug.Log("why am i not broken");
         }
 
 

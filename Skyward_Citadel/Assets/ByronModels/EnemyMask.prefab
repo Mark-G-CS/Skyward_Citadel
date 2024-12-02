@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 3982478714214251826}
   - component: {fileID: 1295317568637748185}
   - component: {fileID: 3383489644259953638}
+  - component: {fileID: 34999962020253910}
   - component: {fileID: 8491353096826628815}
   - component: {fileID: 914925998922501842}
   - component: {fileID: 8563307875363500771}
   - component: {fileID: 8266215973064770107}
   - component: {fileID: 4600787522819617771}
-  - component: {fileID: 34999962020253910}
+  - component: {fileID: 6543565608943771599}
   m_Layer: 0
   m_Name: EnemyMask
   m_TagString: Untagged
@@ -125,7 +126,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5147418937919678086}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -144,6 +145,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &34999962020253910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5147418937919678086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865facbc54a42204ca0d0c0d18fd2249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Floatingdamagetxt: {fileID: 5011718977328693615, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
+  popUpText: {fileID: -2676480483782377715, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
+  amIPlayer: 0
+  startingHealth: 30
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  components: []
 --- !u!114 &8491353096826628815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,21 +262,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageToDeal: 10
---- !u!114 &34999962020253910
-MonoBehaviour:
+--- !u!70 &6543565608943771599
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5147418937919678086}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865facbc54a42204ca0d0c0d18fd2249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Floatingdamagetxt: {fileID: 5011718977328693615, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
-  popUpText: {fileID: -2676480483782377715, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
-  startingHealth: 30
-  iFramesDuration: 0
-  numberOfFlashes: 0
-  components: []
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.03, y: 0}
+  m_Size: {x: 0.1, y: 0.27}
+  m_Direction: 0

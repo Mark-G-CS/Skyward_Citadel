@@ -1,18 +1,20 @@
 using UnityEngine;
 
-public class EnemyBase : MonoBehaviour, IDamageable
+public class EnemyBase : MonoBehaviour, IDamageable // Damage stuffs need to be moved to Health class, consider making a copy?
 {
+    Health health { get; set; }
     public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
     public float DamageResist { get; set; }
 
     protected virtual void Awake()      // only EnemyBase's subclasses can access & allows override
     {
-        MaxHealth = 100f;           // default max health
-        CurrentHealth = MaxHealth;
+        health = GetComponent<Health>();
+        health.MaxHealth = 100f;           // default max health
+        health.CurrentHealth = health.MaxHealth;
         DamageResist = 0f;          // default damage resist
     }
-
+    
     public virtual void Damage(float damageAmount)      // overrideable
     {
         float actualDamage = damageAmount * (1 - DamageResist);
@@ -22,7 +24,8 @@ public class EnemyBase : MonoBehaviour, IDamageable
 
         if (CurrentHealth <= 0)
         {
-            Death();
+            
+            Invoke("Death", 1f);
         }
     }
 
@@ -30,5 +33,6 @@ public class EnemyBase : MonoBehaviour, IDamageable
     {
         Debug.Log($"{gameObject.name} has died!");
         Destroy(gameObject); // Remove the object from the game
+        
     }
 }
