@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 914925998922501842}
   - component: {fileID: 8563307875363500771}
   - component: {fileID: 8266215973064770107}
+  - component: {fileID: 4600787522819617771}
+  - component: {fileID: 34999962020253910}
   m_Layer: 0
   m_Name: EnemyMask
   m_TagString: Untagged
@@ -182,12 +184,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5147418937919678086}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c03db79e2f74dc245b2147015831a2a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DamageToDeal: 10
+  PlayerSource: 0
+  LifeSpan: 0.3
 --- !u!70 &8266215973064770107
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -225,3 +229,34 @@ CapsuleCollider2D:
   m_Offset: {x: 0.02020426, y: 0}
   m_Size: {x: 0.18979168, y: 0.28769413}
   m_Direction: 0
+--- !u!114 &4600787522819617771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5147418937919678086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3983896d04e81e42bbbd9d1d27749d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageToDeal: 10
+--- !u!114 &34999962020253910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5147418937919678086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865facbc54a42204ca0d0c0d18fd2249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Floatingdamagetxt: {fileID: 5011718977328693615, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
+  popUpText: {fileID: -2676480483782377715, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
+  startingHealth: 30
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  components: []

@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 3030333553976483054}
   - component: {fileID: 6694920814458416504}
   - component: {fileID: 3793012212580243092}
+  - component: {fileID: -6771676592350403213}
+  - component: {fileID: -7648379775928537828}
   m_Layer: 0
   m_Name: EnemyFrog
   m_TagString: Damage
@@ -219,9 +221,42 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889407053068897913}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c03db79e2f74dc245b2147015831a2a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DamageToDeal: 10
+  PlayerSource: 0
+  LifeSpan: 0.3
+--- !u!114 &-6771676592350403213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889407053068897913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3983896d04e81e42bbbd9d1d27749d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageToDeal: 10
+--- !u!114 &-7648379775928537828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889407053068897913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865facbc54a42204ca0d0c0d18fd2249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Floatingdamagetxt: {fileID: 5011718977328693615, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
+  popUpText: {fileID: -2676480483782377715, guid: 6f69bfedc9caa6f459deb5580601759c, type: 3}
+  startingHealth: 30
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  components: []
