@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 1384281718}
   - component: {fileID: 1384281717}
   m_Layer: 0
-  m_Name: Scene Transitioner 4
+  m_Name: Next Area - Left Path Continued
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -981,10 +981,10 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.12}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_UseDelaunayMesh: 1
 --- !u!483693784 &1512577753
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -56650,7 +56650,7 @@ GameObject:
   - component: {fileID: 1569656261}
   - component: {fileID: 1569656260}
   m_Layer: 0
-  m_Name: Scene Transitioner 1
+  m_Name: Next Area - RIght Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56845,7 +56845,7 @@ GameObject:
   - component: {fileID: 1867736404}
   - component: {fileID: 1867736403}
   m_Layer: 0
-  m_Name: Scene Transitioner 3
+  m_Name: Previous Area - Left Path Continued
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57152,7 +57152,7 @@ GameObject:
   - component: {fileID: 1984274615}
   - component: {fileID: 1984274614}
   m_Layer: 0
-  m_Name: Scene Transitioner 2
+  m_Name: Next Area - Left Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

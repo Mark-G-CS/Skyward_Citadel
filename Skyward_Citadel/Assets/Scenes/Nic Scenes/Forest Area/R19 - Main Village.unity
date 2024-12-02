@@ -25990,7 +25990,7 @@ GameObject:
   - component: {fileID: 340923985}
   - component: {fileID: 340923984}
   m_Layer: 0
-  m_Name: Previous Level (Right)
+  m_Name: Previous Area (Right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26511,10 +26511,10 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.12}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_UseDelaunayMesh: 1
 --- !u!483693784 &594626530
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -38186,10 +38186,10 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.12}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_UseDelaunayMesh: 1
 --- !u!483693784 &1512577753
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -81990,7 +81990,7 @@ GameObject:
   - component: {fileID: 1569656261}
   - component: {fileID: 1569656260}
   m_Layer: 0
-  m_Name: Previous Level (Left)
+  m_Name: Previous Area (Left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82681,7 +82681,7 @@ GameObject:
   - component: {fileID: 2050999804}
   - component: {fileID: 2050999803}
   m_Layer: 0
-  m_Name: Next Level
+  m_Name: Next Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82823,9 +82823,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 101710880}
+  - {fileID: 2050999806}
   - {fileID: 1569656263}
   - {fileID: 340923987}
-  - {fileID: 2050999806}
   - {fileID: 1826945483}
   - {fileID: 576742256}
   - {fileID: 344791999}
