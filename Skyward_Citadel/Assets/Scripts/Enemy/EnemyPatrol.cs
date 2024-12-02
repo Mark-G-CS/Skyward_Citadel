@@ -21,6 +21,13 @@ public class EnemyPatrol : MonoBehaviour
     [Header("Enemy Animator")]
     [SerializeField] private Animator anim;
 
+    [Header("Player Detection")]
+    [SerializeField] private Transform player;
+    [SerializeField] private float detectionRange;
+    [SerializeField] private float chaseSpeed;
+
+    private bool isChasing;
+
     private void Awake()
     {
         initScale = enemy.localScale;
@@ -32,6 +39,25 @@ public class EnemyPatrol : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerInDetectionRange())
+        {
+            ChasePlayer();
+        }
+        else
+        {
+            if (isChasing)
+            {
+                // stop chasing and reset to patrol
+                isChasing = false;
+            }
+
+            Patrol();
+        }
+    }
+
+    private void Patrol()
+    {
+        
         if (movingLeft)
         {
             if (enemy.position.x >= leftEdge.position.x)
@@ -69,5 +95,28 @@ public class EnemyPatrol : MonoBehaviour
         //Move in that direction
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,
             enemy.position.y, enemy.position.z);
+    }
+
+    private bool PlayerInDetectionRange()
+    {
+        return Vector2.Distance(enemy.position, player.position) <= detectionRange;
+    }
+
+    private void ChasePlayer()
+    {
+        isChasing = true;
+        anim.SetBool("moving", true);
+
+        // determine direction to move towards player
+        int direction = player.position.x > enemy.position.x ? 1 : -1;
+
+        // enemy face player
+        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction,
+            initScale.y, initScale.z);
+
+        // move towards the player
+        enemy.position = Vector2.MoveTowards(enemy.position,
+            new Vector2(player.position.x, enemy.position.y),
+            chaseSpeed * Time.deltaTime);
     }
 }
