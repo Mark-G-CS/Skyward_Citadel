@@ -80,6 +80,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nic Scenes/Forest Area/R24 - Transition to Area 3.unity
     guid: e5733a537215e4d4d9916bb539896e51
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tower Area/R25 - Entrance.unity
+    guid: b830e1bec00ab39448073d860121dc63
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tower Area/R26 - Climb 1.unity
+    guid: 862177d50cb48d44a9924d8a32e2187b
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tower Area/R27 - Climb Intermission.unity
+    guid: cc617b25ab6917e4a8faf5c6990fba38
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tower Area/R28 - Post Climb 1.unity
+    guid: 9e9b87ab9cc2d5b439b32ea6bfe018f4
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Tower Area/R29 - Bonus Left Room.unity
+    guid: 417a60232ea2698449273993ba3303d0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

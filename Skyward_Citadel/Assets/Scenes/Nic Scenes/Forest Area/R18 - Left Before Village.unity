@@ -26495,7 +26495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 19
   playerSetX: 0
-  playerSetY: 1
+  playerSetY: 2
 --- !u!61 &903756863
 BoxCollider2D:
   m_ObjectHideFlags: 0
