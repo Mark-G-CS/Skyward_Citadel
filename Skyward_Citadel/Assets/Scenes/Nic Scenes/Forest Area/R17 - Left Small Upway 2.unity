@@ -5923,8 +5923,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIndex: 16
-  playerSetX: 0
-  playerSetY: 1
+  playerSetX: -7.6
+  playerSetY: 11.4
 --- !u!61 &1569656261
 BoxCollider2D:
   m_ObjectHideFlags: 0
