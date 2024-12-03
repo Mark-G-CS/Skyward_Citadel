@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RangedEnemy : EnemyBase 
+public class RangedEnemy : EnemyBase, IDamageable
 {
     protected override void Awake()
     {

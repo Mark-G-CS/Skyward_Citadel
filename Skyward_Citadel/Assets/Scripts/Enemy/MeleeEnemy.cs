@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class MeleeEnemy : EnemyBase 
+public class MeleeEnemy : EnemyBase, IDamageable
 {
+    
     protected override void Awake()
     {
         base.Awake();

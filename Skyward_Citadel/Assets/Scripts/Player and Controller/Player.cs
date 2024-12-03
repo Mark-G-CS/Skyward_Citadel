@@ -5,9 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour, IDamageable
 {
     SpriteRenderer based;
-    public  PlayerController controller;
+    public PlayerController2 controller;
     [field: SerializeField] public float MaxHealth { get; set; } = 100f;
     public float CurrentHealth { get; set; }
+    public Animator animator;
 
     #region State Machine Var
     public PlayerStateMachine StateMachine { get; set; }
@@ -29,7 +30,8 @@ public class Player : MonoBehaviour, IDamageable
         DashState = new PlayerDashState(this,StateMachine);   
         interactState = new PlayerInteractState(this,StateMachine);
         resolverState = new PlayerResolverState(this,StateMachine);
-        controller = GetComponentInParent<PlayerController>();
+        controller = GetComponentInParent<PlayerController2>();
+        animator = GetComponent<Animator>();
 
     }
 

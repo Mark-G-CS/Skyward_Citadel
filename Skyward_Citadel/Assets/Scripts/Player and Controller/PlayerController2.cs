@@ -11,6 +11,11 @@ public class PlayerController2 : PhysicsObject
     public int lives;
     public Text livesText;
     public bool leftFace = true;
+    public Player Player;
+
+    public GameObject ProjectileGreenFireObject, meleeBox; 
+        //Holds the projectile type for the player: must be set on prefab for default value
+        //Also melee hurty box
     // Start is called before the first frame update
 
     //Movement Variables
@@ -58,13 +63,14 @@ public class PlayerController2 : PhysicsObject
     {
         startpos = transform.position;
         lives = 3;
-        livesText.text = lives.ToString() + " lives";
+        //livesText.text = lives.ToString() + " lives";
         //animator = GetComponent<Animator>();
     }
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        Player = GetComponent<Player>();  
 
     }
 
@@ -115,6 +121,7 @@ public class PlayerController2 : PhysicsObject
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if (Input.GetKey(KeyCode.D))
         {
             if (leftFace)
@@ -142,11 +149,11 @@ public class PlayerController2 : PhysicsObject
 
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
-            animator.SetBool("Grounded", false);
+            //animator.SetBool("Grounded", false);
         }
         else
         {
-            animator.SetBool("Grounded", true);
+            //animator.SetBool("Grounded", true);
         }
 
 
@@ -172,8 +179,56 @@ public class PlayerController2 : PhysicsObject
 
         Movement(new Vector2(move.x, 0), true);
         Movement(new Vector2(0, move.y), false);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            meleeAttack();
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+            {
+                fireBullet(-40f);
+            }
+            else if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+            {
+                fireBullet(40f);
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                fireBullet(-90f);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                fireBullet(90f);
+            }
+            else { fireBullet(0); }
+
+
+        }
+
+
     }
 
+    public void meleeAttack()
+    {
+        if (!animator.GetBool("Attack"))
+        {
+            animator.SetBool("Attack", true);
+            Quaternion temp = transform.rotation;
+            Instantiate(meleeBox, transform.position, temp);
+        }
+
+    }
+
+    public void fireBullet(float rotMod)
+    {
+        Quaternion temp = transform.rotation;
+        temp *= Quaternion.Euler(0, 0, rotMod);
+        Debug.Log("Q");
+        Instantiate(ProjectileGreenFireObject, transform.position, temp);
+    }
 
 
 

@@ -14,7 +14,8 @@ public class PlayerInAirState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Entered 'inAirState'");                      //"IM FREEEE FALLLIN");
+        Debug.Log("Entered 'inAirState'");
+        player.animator.SetBool("Grounded", false);  //"IM FREEEE FALLLIN");
     }
 
     public override void ExitState()

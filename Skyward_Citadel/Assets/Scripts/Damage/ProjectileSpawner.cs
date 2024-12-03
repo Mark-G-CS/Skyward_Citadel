@@ -38,7 +38,7 @@ public class ProjectileSpawner : MonoBehaviour
     {
         Quaternion temp = transform.rotation;
         temp *= Quaternion.Euler(0, 0, rotMod);
-        Debug.Log("Q");
+        //Debug.Log("Q");
         Instantiate(ProjectileBlueFireObject, transform.position, temp);
         timer = 0;
 
