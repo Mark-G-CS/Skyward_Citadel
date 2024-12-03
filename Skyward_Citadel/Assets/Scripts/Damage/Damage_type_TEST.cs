@@ -8,7 +8,7 @@ public class Damage_type_TEST : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         IDamageable damageable = collider.GetComponent<IDamageable>();
-        if (damageable != null)
+        if (damageable != null && !collider.CompareTag(tag))
         {
             damageable.Damage(DamageToDeal);
             Debug.Log("Delt " + DamageToDeal+ " damage!");
