@@ -4801,9 +4801,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6101553717334147364, guid: 2556f57051f8c8048bff4deca4c44f98, type: 3}
+      propertyPath: startingHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6611149040334787595, guid: 2556f57051f8c8048bff4deca4c44f98, type: 3}
       propertyPath: m_Name
       value: NicPlayerTestPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528890073805208086, guid: 2556f57051f8c8048bff4deca4c44f98, type: 3}
+      propertyPath: <MaxHealth>k__BackingField
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7886458751703490948, guid: 2556f57051f8c8048bff4deca4c44f98, type: 3}
       propertyPath: m_LocalPosition.x
