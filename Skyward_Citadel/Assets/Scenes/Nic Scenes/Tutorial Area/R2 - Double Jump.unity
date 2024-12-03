@@ -316,6 +316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerStartSquare
       objectReference: {fileID: 0}
+    - target: {fileID: 8782101164282597082, guid: b89d410ddf6cfaf458296aba8ac9d00c, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
