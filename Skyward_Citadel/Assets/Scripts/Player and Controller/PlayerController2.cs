@@ -187,12 +187,12 @@ public class PlayerController2 : PhysicsObject
         Movement(new Vector2(move.x, 0), true);
         Movement(new Vector2(0, move.y), false);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.RightArrow))
         {
             meleeAttack();
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1)||Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
             {
