@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class Damage_type_Melee : MonoBehaviour
 {
@@ -47,8 +48,9 @@ public class Damage_type_Melee : MonoBehaviour
         {
             if(animator != null) { 
             GetComponentInParent<Animator>().SetBool("Attack", false);
-            }           
-            Destroy(gameObject);
+            }
+            GameObject meleeBox;
+            Destroy(transform.root.gameObject);
         }
 
 
