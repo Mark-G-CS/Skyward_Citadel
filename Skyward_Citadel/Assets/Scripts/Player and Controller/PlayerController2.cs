@@ -13,9 +13,9 @@ public class PlayerController2 : PhysicsObject
     public bool leftFace = true;
     public Player Player;
 
-    public GameObject ProjectileGreenFireObject, meleeBox; 
-        //Holds the projectile type for the player: must be set on prefab for default value
-        //Also melee hurty box
+    public GameObject ProjectileGreenFireObject, meleeBox;
+    //Holds the projectile type for the player: must be set on prefab for default value
+    //Also melee hurty box
     // Start is called before the first frame update
 
     //Movement Variables
@@ -70,7 +70,7 @@ public class PlayerController2 : PhysicsObject
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        Player = GetComponent<Player>();  
+        Player = GetComponent<Player>();
 
     }
 
@@ -123,9 +123,11 @@ public class PlayerController2 : PhysicsObject
     {
         if (Input.GetKey(KeyCode.R))
         {
-           GameObject respawn = GameObject.FindGameObjectWithTag("Respawn");
+            GameObject respawn = GameObject.FindGameObjectWithTag("Respawn");
             this.transform.position = new Vector3(respawn.transform.position.x, respawn.transform.position.y, 0.0f);
         }
+
+        unstuck();
 
         if (Input.GetKey(KeyCode.D))
         {
@@ -414,7 +416,7 @@ public class PlayerController2 : PhysicsObject
         }
 
 
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.A)&&dashTimerCounter==0)
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.A) && dashTimerCounter == 0)
         {
             velocity.x = -dashSetSpeed;
             dashTimerCounter = 1;
@@ -481,5 +483,31 @@ public class PlayerController2 : PhysicsObject
     {
         GetComponent<Rigidbody2D>().transform.Rotate(0f, 180f, 0f);
 
+    }
+
+    public void unstuck()
+    {
+        if (Input.GetKey(KeyCode.Keypad2)|| Input.GetKey(KeyCode.Keypad5))
+        {
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - 0.1f, 0.0f);
+        }
+
+
+        if (Input.GetKey(KeyCode.Keypad4))
+        {
+            this.transform.position = new Vector3(this.transform.position.x - 0.1f, this.transform.position.y, 0.0f);
+        }
+
+
+        if (Input.GetKey(KeyCode.Keypad6))
+        {
+            this.transform.position = new Vector3(this.transform.position.x+0.1f, this.transform.position.y, 0.0f);
+        }
+
+
+        if (Input.GetKey(KeyCode.Keypad8))
+        {
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y +0.1f, 0.0f);
+        }
     }
 }
