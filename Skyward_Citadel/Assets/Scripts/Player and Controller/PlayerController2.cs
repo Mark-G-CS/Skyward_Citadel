@@ -123,7 +123,8 @@ public class PlayerController2 : PhysicsObject
     {
         if (Input.GetKey(KeyCode.R))
         {
-            this.transform.position = new Vector3(0.0f, 1.0f, 0.0f);
+           GameObject respawn = GameObject.FindGameObjectWithTag("Respawn");
+            this.transform.position = new Vector3(respawn.transform.position.x, respawn.transform.position.y, 0.0f);
         }
 
         if (Input.GetKey(KeyCode.D))
