@@ -78,7 +78,7 @@ public class PlayerController2 : PhysicsObject
     {
         if (move.magnitude < 0.00001f) return;
         RaycastHit2D[] results = new RaycastHit2D[16];
-        int cnt = GetComponent<Rigidbody2D>().Cast(move, results, move.magnitude + 0.09f);
+        int cnt = GetComponent<Rigidbody2D>().Cast(move, results, move.magnitude + 0.001f);
         if (cnt > 0)
         {
             for (int i = 0; i < cnt; ++i)
@@ -412,6 +412,20 @@ public class PlayerController2 : PhysicsObject
         {
             dashOK = true;
         }
+
+
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.A)&&dashTimerCounter==0)
+        {
+            velocity.x = -dashSetSpeed;
+            dashTimerCounter = 1;
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.D) && dashTimerCounter == 0)
+        {
+            velocity.x = dashSetSpeed;
+            dashTimerCounter = 1;
+        }
+
 
         if (Input.GetKey(KeyCode.A) && (doubleTapA == 0 || doubleTapA == 1) && dashTimerCounter == 0)
         {
