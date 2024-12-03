@@ -22,16 +22,27 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private Animator anim;
 
     [Header("Player Detection")]
-    [SerializeField] private Transform player;
+    // [SerializeField] private Transform player;
     [SerializeField] private float detectionRange;
     [SerializeField] private float chaseSpeed;
 
+    private GameObject player;
     private bool isChasing;
 
     private void Awake()
     {
         initScale = enemy.localScale;
     }
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("No Player Tag");
+        }
+    }
+
     private void OnDisable()
     {
         anim.SetBool("moving", false);
@@ -39,7 +50,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerInDetectionRange())
+        if (player != null && PlayerInDetectionRange())
         {
             ChasePlayer();
         }
@@ -99,7 +110,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private bool PlayerInDetectionRange()
     {
-        return Vector2.Distance(enemy.position, player.position) <= detectionRange;
+        return Vector2.Distance(enemy.position, player.transform.position) <= detectionRange;
     }
 
     private void ChasePlayer()
@@ -108,7 +119,7 @@ public class EnemyPatrol : MonoBehaviour
         anim.SetBool("moving", true);
 
         // determine direction to move towards player
-        int direction = player.position.x > enemy.position.x ? 1 : -1;
+        int direction = player.transform.position.x > enemy.position.x ? 1 : -1;
 
         // enemy face player
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction,
@@ -116,7 +127,7 @@ public class EnemyPatrol : MonoBehaviour
 
         // move towards the player
         enemy.position = Vector2.MoveTowards(enemy.position,
-            new Vector2(player.position.x, enemy.position.y),
+            new Vector2(player.transform.position.x, enemy.position.y),
             chaseSpeed * Time.deltaTime);
     }
 }
