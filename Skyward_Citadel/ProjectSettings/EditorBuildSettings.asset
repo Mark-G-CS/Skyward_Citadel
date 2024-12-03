@@ -5,15 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Nic Scenes/Nic's Awesome Map.unity
-    guid: 679cb801b5a774c4bb6bbbe9a75196d9
+    path: Assets/Scenes/Nic Scenes/Empty Room.unity
+    guid: d01fcfa6098f37c489257e024dd1c7d0
   - enabled: 1
     path: Assets/Scenes/Nic Scenes/TestScene1.unity
     guid: 9f067d30301c92f4ab1e52ad43e80684
+  - enabled: 1
+    path: Assets/Scenes/Nic Scenes/Nic's Awesome Map.unity
+    guid: 679cb801b5a774c4bb6bbbe9a75196d9
   - enabled: 1
     path: Assets/Scenes/Nic Scenes/Tutorial Area/R1 - Start.unity
     guid: 133492b27decf6845af8d58ab7061f00

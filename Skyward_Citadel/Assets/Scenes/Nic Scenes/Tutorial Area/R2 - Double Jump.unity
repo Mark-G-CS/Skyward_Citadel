@@ -262,21 +262,8 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8632772416321674254, guid: a7e978f4bde2bbe4f98b2dad94c0751d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1027668891}
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a7e978f4bde2bbe4f98b2dad94c0751d, type: 3}
---- !u!1 &1027668890 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8632772416321674254, guid: a7e978f4bde2bbe4f98b2dad94c0751d, type: 3}
-  m_PrefabInstance: {fileID: 1027668889}
-  m_PrefabAsset: {fileID: 0}
---- !u!33 &1027668891
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027668890}
-  m_Mesh: {fileID: 0}
 --- !u!1001 &1226092632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14027,26 +14014,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -5, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -4, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 12, y: 5, z: 0}
     second:
       serializedVersion: 2
@@ -14508,26 +14475,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -6, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -5, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -4, y: 6, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 4
@@ -46967,7 +46914,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 122508a7425d146418ad016e3b507084, type: 2}
   - m_RefCount: 19
     m_Data: {fileID: 11400000, guid: 093c607773ddc724bae85c05dea6a57b, type: 2}
-  - m_RefCount: 4554
+  - m_RefCount: 4550
     m_Data: {fileID: 11400000, guid: 9eeef91daa9c1124ea83d0ed97afbe63, type: 2}
   - m_RefCount: 19
     m_Data: {fileID: 11400000, guid: aeab2fd0c79b5f443997a04347ba092b, type: 2}
@@ -46986,7 +46933,7 @@ Tilemap:
     m_Data: {fileID: 1544925812, guid: 63b03eaa85550aa41a7d451f2b848e58, type: 3}
   - m_RefCount: 36
     m_Data: {fileID: -1228405271, guid: 2852038e373524b99b67701570c171c6, type: 3}
-  - m_RefCount: 4554
+  - m_RefCount: 4550
     m_Data: {fileID: -7823662862089189128, guid: e980bcd3c714cf048ac72b31ea04def8, type: 3}
   - m_RefCount: 19
     m_Data: {fileID: -938525989, guid: 2852038e373524b99b67701570c171c6, type: 3}
@@ -47001,7 +46948,7 @@ Tilemap:
   - m_RefCount: 7
     m_Data: {fileID: -1097792978, guid: 63b03eaa85550aa41a7d451f2b848e58, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 4649
+  - m_RefCount: 4645
     m_Data:
       e00: 1
       e01: 0
@@ -47020,7 +46967,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 4649
+  - m_RefCount: 4645
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 1.08533e-40, g: 1.08533e-40, b: 1.08533e-40, a: 1.08533e-40}
@@ -59242,21 +59189,8 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7403207403464494169, guid: b178be9e76dd58e49bb093e55e161214, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2115293111}
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b178be9e76dd58e49bb093e55e161214, type: 3}
---- !u!1 &2115293110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7403207403464494169, guid: b178be9e76dd58e49bb093e55e161214, type: 3}
-  m_PrefabInstance: {fileID: 2115293109}
-  m_PrefabAsset: {fileID: 0}
---- !u!33 &2115293111
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115293110}
-  m_Mesh: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
