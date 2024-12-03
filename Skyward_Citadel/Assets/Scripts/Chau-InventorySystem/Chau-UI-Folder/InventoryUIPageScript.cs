@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using System;
+using UnityEngine.UI;
 
 
 public class InventoryUIPageScript : MonoBehaviour
@@ -14,7 +15,20 @@ public class InventoryUIPageScript : MonoBehaviour
     [SerializeField]
     private RectTransform contentPanel;
 
+    [SerializeField]
+    private UIInventoryDescription itemDescription;
+
+    private void Awake()
+    {
+        Hide();
+        itemDescription.ResetDescription();
+    }
+
     System.Collections.Generic.List<UIInventoryItem> listOfUIItems = new System.Collections.Generic.List<UIInventoryItem>();
+
+    public Sprite image;
+    public int quantity;
+    public string title, description;
 
     public void InitializeInventoryUI(int inventorySize)
     {
@@ -94,6 +108,7 @@ public class InventoryUIPageScript : MonoBehaviour
 
     private void HandleItemSelection(UIInventoryItem item)
     {
+        itemDescription.SetDescription(image, title, description);
         Debug.Log(item.name);
     }
 
@@ -101,6 +116,9 @@ public class InventoryUIPageScript : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
+        itemDescription.ResetDescription();
+
+        listOfUIItems[0].SetData(image, quantity);
     }
 
     public void Hide()
