@@ -121,6 +121,10 @@ public class PlayerController2 : PhysicsObject
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKey(KeyCode.R))
+        {
+            this.transform.position = new Vector3(0.0f, 1.0f, 0.0f);
+        }
 
         if (Input.GetKey(KeyCode.D))
         {
