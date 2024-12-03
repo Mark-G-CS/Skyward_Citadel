@@ -15,7 +15,7 @@ public class EnemyBase : MonoBehaviour, IDamageable // Damage stuffs need to be 
         DamageResist = 0f;          // default damage resist
     }
     
-    public virtual void Damage(float damageAmount)      // overrideable
+    public virtual void Damage(float damageAmount)      // overrideable //Currently being Overwritten by Health Class
     {
         float actualDamage = damageAmount * (1 - DamageResist);
         CurrentHealth -= actualDamage;
